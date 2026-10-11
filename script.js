@@ -191,5 +191,3 @@ document.querySelector("#contact-info").innerHTML = cvData.contact
 document.querySelector("#cv-content").innerHTML = cvData.sections
   .map(renderSection)
   .join("");
-document.querySelector("#last-updated").textContent =
-  `Last updated ${new Date().getFullYear()}`;
