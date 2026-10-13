@@ -1,119 +1,165 @@
+/**
+ * Curriculum Vitae data
+ */
 const cvData = {
   name: "Kris-Mikael Krister",
-  role: "Senior Software Engineer and Engineering Manager",
+  role: "Senior programvareutvikler og Engineering Manager",
   photo: "242216.jpeg",
   contact: [
-    ["Address", "Finnsnes, Norway"],
-    ["Date of birth", "1985-08-22"],
-    ["Phone", "+47 97 15 26 92"],
-    ["Email", "krismikael@proton.me"],
-    ["LinkedIn", "https://www.linkedin.com/in/krismikaelkrister/"],
+    { key: "Bosted", val: "Finnsnes, Troms", icon: "📍" },
+    { key: "Født", val: "22. august 1985", icon: "🎂" },
+    {
+      key: "Telefon",
+      val: "+47 97 15 26 92",
+      icon: "📞",
+      href: "tel:+4797152692",
+    },
+    {
+      key: "E-post",
+      val: "krismikael@proton.me",
+      icon: "✉️",
+      href: "mailto:krismikael@proton.me",
+    },
+    {
+      key: "LinkedIn",
+      val: "krismikaelkrister",
+      icon: "🔗",
+      href: "https://www.linkedin.com/in/krismikaelkrister/",
+    },
   ],
   sections: [
     {
       id: "profile",
-      title: "Key qualifications",
+      title: "Nøkkelkvalifikasjoner",
       type: "summary",
       paragraphs: [
-        "Software engineer, technical leader and engineering manager with 17 years of professional experience. I love building strong teams and high-quality products. I'm dedicated to helping people shine in their roles and thrive together.",
-        "I work across the full stack, building backend and frontend systems, user interfaces, and APIs. I primarily write TypeScript, JavaScript, and Python. I get a lot of help from AI agents, without letting them run wild nor determine my direction. Throughout most of my career, I've worked closely with product managers and UX designers, staying in regular contact with real users.",
-        "I enjoy working both independently and as part of a team. I value clarity, and I'm thorough and responsible while also being warm and collaborative.",
-      ],
-    },
-    {
-      id: "education",
-      title: "Education",
-      type: "list",
-      items: [
-        {
-          title: "Master of Computer Science",
-          description:
-            "Specialisation in security and vulnerabilities, Norwegian University of Science and Technology (NTNU)",
-          meta: "2004 - 2009",
-        },
-        {
-          title: "General university admissions certification",
-          description: "Sandefjord Videregående Skole (SVGS)",
-          meta: "2001 - 2004",
-        },
+        "Programvareutvikler, teknisk leder og engineering manager med 17 års profesjonell erfaring. Som leder jobber jeg for å bygge robuste team, og som koder bygger jeg digitale produkter som effektivt hjelper brukerne og som kodere elsker å jobbe med. Uavhengig av rolle jobber jeg for å hjelpe folk med å lykkes i rollene sine og for å trives sammen.",
+        "Jeg jobber på tvers av hele stacken med backend- og frontendsystemer, brukergrensesnitt og API-er. Primært koder jeg i TypeScript, JavaScript og Python, men har erfaring med flere andre programmeringsspråk. Jeg drar god nytte av AI-agenter til å øke farten min, uten å la dem ta over styringen eller retningen. Gjennom mesteparten av karrieren har jeg jobbet tett med produktledere og UX-designere og vært i kontinuerlig dialog med ekte brukere av det jeg, og teamene mine, har laget.",
+        "Jeg trives godt med både selvstendig arbeid og tett arbeid i team. Jeg verdsetter klarhet og er grundig og ansvarsbevisst, samtidig som jeg er varm og inkluderende 🫂",
       ],
     },
     {
       id: "experience",
-      title: "Professional experience",
+      title: "Yrkeserfaring",
       type: "experience",
       items: [
         {
           title:
-            "Senior Software Engineer, Engineering Manager and Principal Engineer at Otovo ASA",
+            "Senior Software Engineer, Engineering Manager og Principal Engineer",
+          subtitle: "Otovo ASA",
           description:
-            "Joined Otovo as its 10th employee and helped scale the company from its early stage to operations across 13 countries and more than 500 employees. Over eight years, I planned, built, and launched hundreds of product features across the platform, while also building and leading engineering teams through the company’s growth. I worked across the full stack throughout, collaborating closely with product managers and stakeholders, leading my team, supporting other engineering teams, and working together with UX designers to shape and build products.",
-          meta: "2018 - 2026",
+            "Ble ansatt som den 10. personen i Otovo og var med på å bygge selskapet fra tidlig oppstartsfase til virksomhet i 13 land og over 500 ansatte. Gjennom åtte år planla, utviklet og lanserte jeg tusenvis av funksjoner, store og små, på tvers av plattformen, samtidig som jeg bygget og ledet utviklingsteam. Jeg jobbet fullstack, samarbeidet daglig med produkteiere og andre interessenter, støttet andre team, og jobbet tett med interaksjonsdesignere for å forme produktene vi bygde.",
+          meta: "2018 – 2026",
         },
         {
-          title: "Senior Consultant, Miles AS",
+          title: "Seniorkonsulent",
+          subtitle: "Miles AS",
           description:
-            "Software development and architecture at FINN.no and NRK.",
-          meta: "2017 - 2018",
+            "Programvareutvikling og arkitektur hos FINN.no og NRK. Jobbet i FINN frontend kjerneteam, i FINN Småjobber, i FINN Oppdrag og i NRK Super-teamet.",
+          meta: "2017 – 2018",
         },
         {
-          title: "Senior Consultant, Webstep AS",
+          title: "Seniorkonsulent",
+          subtitle: "Webstep AS",
           description:
-            "Software development and architecture at Gjensidige and FINN.no.",
-          meta: "2013 - 2017",
+            "Programvareutvikling og arkitektur hos Gjensidige og FINN.no.",
+          meta: "2013 – 2017",
         },
         {
-          title: "Senior Consultant, Itera Consulting",
+          title: "Seniorkonsulent",
+          subtitle: "Itera Consulting",
           description:
-            "Software development and architecture at KLP and Gjensidige.",
-          meta: "2009 - 2013",
+            "Programvareutvikling og arkitektur hos KLP og Gjensidige.",
+          meta: "2009 – 2013",
         },
         {
-          title:
-            "Department Engineer, Norwegian National Security Authority, NorCERT",
+          title: "Avdelingsingeniør",
+          subtitle: "Nasjonal sikkerhetsmyndighet (NSM), NorCERT",
           description:
-            "Monitoring and analysis of traffic across critical internet infrastructure in Norway.",
-          meta: "Summer 2008",
+            "Overvåking og analyse av trafikk på tvers av kritisk internettinfrastruktur i Norge.",
+          meta: "Sommeren 2008",
         },
         {
-          title: "IT Support, NTNU IT Department, Orakeltjenesten",
+          title: "IT-support",
+          subtitle: "NTNU IT-avdeling, Orakeltjenesten",
           description:
-            "Resolved issues related to NTNU's central IT systems. Troubleshot hardware and software problems at the application and operating system level.",
-          meta: "2005 - 2008",
+            "Løste henvendelser knyttet til NTNUs sentrale IT-systemer. Feilsøking av maskin- og programvare på applikasjons- og operativsystemnivå.",
+          meta: "2005 – 2008",
+        },
+      ],
+    },
+    {
+      id: "education",
+      title: "Utdanning",
+      type: "list",
+      items: [
+        {
+          title: "Master i datateknologi (Sivilingeniør)",
+          subtitle: "Norges teknisk-naturvitenskapelige universitet (NTNU)",
+          description: "Spesialisering innen IT-sikkerhet og sårbarheter.",
+          meta: "2004 – 2009",
+        },
+        {
+          title: "Generell studiekompetanse",
+          subtitle: "Sandefjord Videregående Skole (SVGS)",
+          description: "Realfaglig fordypning.",
+          meta: "2001 – 2004",
         },
       ],
     },
     {
       id: "programming-languages",
-      title: "Programming languages",
+      title: "Programmeringsspråk og teknologistack",
       type: "language-list",
       items: [
         {
-          title: "TypeScript and JavaScript",
+          title: "TypeScript & JavaScript",
+          tags: [
+            "TypeScript",
+            "JavaScript",
+            "Node.js",
+            "Next.js",
+            "React",
+            "Angular",
+            "jQuery",
+          ],
           description:
-            "17 years of experience with JavaScript and around five years with TypeScript, primarily using Node.js, Next.js, React, Angular, jQuery, and Backbone.js.",
+            "17 års erfaring med JavaScript og over fem år med TypeScript. Omfattende erfaring med moderne frontend-rammeverk og Node.js-backends. Har også erfaring med eldre rammeverk som for eksempel jQuery, Backbone.js og mange flere, spør gjerne om mer detaljer.",
         },
         {
           title: "Python",
+          tags: ["Python", "Django", "PostgreSQL", "FastAPI", "Pandas"],
           description:
-            "Eight years of experience with Python, primarily using Django and PostgreSQL.",
+            "Åtte års erfaring med Python, primært med Django og PostgreSQL.",
         },
         {
           title: "Java",
+          tags: ["Java", "Spring", "Oracle", "Hibernate"],
           description:
-            "Eight years of experience with Java, primarily using Spring and Oracle.",
+            "Åtte års erfaring med Java, primært med Spring og Oracle-databaser.",
         },
       ],
     },
     {
       id: "additional",
-      title: "Additional information",
+      title: "Annen informasjon",
       type: "list",
       items: [
-        { title: "Driving licence", description: "Category B" },
         {
-          title: "Languages",
-          description: "Norwegian - native; English - fluent.",
+          title: "Førerkort",
+          subtitle: "Klasse B (personbil)",
+          description: "",
+        },
+        {
+          title: "Språk",
+          subtitle: "Norsk & Engelsk",
+          description:
+            "Norsk – morsmål; Engelsk – flytende skriftlig og muntlig.",
+        },
+        {
+          title: "Referanser",
+          subtitle: "Tilgjengelig på forespørsel",
+          description: "",
         },
       ],
     },
@@ -121,7 +167,7 @@ const cvData = {
 };
 
 const escapeHtml = (value) =>
-  String(value).replace(
+  String(value || "").replace(
     /[&<>"']/g,
     (char) =>
       ({
@@ -130,64 +176,187 @@ const escapeHtml = (value) =>
         ">": "&gt;",
         '"': "&quot;",
         "'": "&#039;",
-      })[char],
+      })[char] || char,
   );
 
-const renderContact = ([label, value]) => {
-  let href;
-  if (value.startsWith("https://")) href = value;
-  if (label === "Email") href = `mailto:${value}`;
-  if (label === "Phone") href = `tel:${value.replace(/[^\d+]/g, "")}`;
-  const content = href
-    ? `<a href="${escapeHtml(href)}">${escapeHtml(value)}</a>`
-    : escapeHtml(value);
-  return `<dt>${escapeHtml(label)}</dt><dd>${content}</dd>`;
+/**
+ * Render contact list item
+ */
+const renderContactItem = (item) => {
+  const content = item.href
+    ? `<a href="${escapeHtml(item.href)}" ${item.href.startsWith("http") ? 'target="_blank" rel="noopener noreferrer"' : ""}>${escapeHtml(item.val)}</a>`
+    : escapeHtml(item.val);
+
+  return `
+    <li class="contact-list-item">
+      <span class="contact-icon" aria-hidden="true">${item.icon}</span>
+      <span class="contact-label">${escapeHtml(item.key)}</span>
+      <span class="contact-val">${content}</span>
+    </li>
+  `;
 };
 
-const renderItem = (item) => `
-  <article class="timeline-item">
-    <span class="bullet" aria-hidden="true"></span>
-    <div>
-      <p class="item-title">${escapeHtml(item.title)}</p>
-      <p class="item-description">${escapeHtml(item.description || "")}</p>
+/**
+ * Render timeline items (experience, education)
+ */
+const renderTimelineItem = (item) => {
+  const subtitleHtml = item.subtitle
+    ? ` · <span style="font-weight: 500; color: var(--color-text-muted);">${escapeHtml(item.subtitle)}</span>`
+    : "";
+
+  return `
+    <article class="timeline-item">
+      <div class="timeline-marker" aria-hidden="true"></div>
+      <div class="timeline-header">
+        <h4 class="timeline-title">${escapeHtml(item.title)}${subtitleHtml}</h4>
+        ${item.meta ? `<span class="timeline-badge">${escapeHtml(item.meta)}</span>` : ""}
+      </div>
+      <p class="timeline-desc">${escapeHtml(item.description)}</p>
+    </article>
+  `;
+};
+
+/**
+ * Render skills cards with tags
+ */
+const renderSkillCard = (item) => {
+  const tagsHtml =
+    item.tags && item.tags.length
+      ? `<ul class="skill-tag-list">${item.tags.map((t) => `<li class="skill-tag">${escapeHtml(t)}</li>`).join("")}</ul>`
+      : "";
+
+  return `
+    <div class="skill-card">
+      <h4 class="skill-card-title">${escapeHtml(item.title)}</h4>
+      ${tagsHtml}
+      <p class="skill-card-desc">${escapeHtml(item.description)}</p>
     </div>
-    ${item.meta ? `<time class="item-meta">${escapeHtml(item.meta)}</time>` : "<span></span>"}
-  </article>`;
-
-const renderSection = (section) => {
-  let content;
-  if (section.type === "summary") {
-    const paragraphs = section.paragraphs || [section.text];
-    content = paragraphs
-      .map((paragraph, index) => {
-        const hug =
-          section.id === "profile" && index === paragraphs.length - 1
-            ? ' <span class="hug-emoji" aria-label="hugging">🫂</span>'
-            : "";
-        return `<p class="summary">${escapeHtml(paragraph)}${hug}</p>`;
-      })
-      .join("");
-  }
-  if (
-    section.type === "list" ||
-    section.type === "experience" ||
-    section.type === "language-list"
-  )
-    content = section.items.map(renderItem).join("");
-  return `<section id="${escapeHtml(section.id)}" class="cv-section"><h2 class="section-heading">${escapeHtml(section.title)}</h2>${content}</section>`;
+  `;
 };
 
-document.querySelector("#person-name").textContent = cvData.name;
-document.querySelector("#role").textContent = cvData.role;
-const photo = document.querySelector("#profile-photo");
-if (cvData.photo) {
-  photo.src = cvData.photo;
-  photo.hidden = false;
-  photo.alt = `${cvData.name} profile photo`;
+/**
+ * Render section
+ */
+const renderSection = (section) => {
+  let content = "";
+
+  if (section.type === "summary") {
+    const paragraphs = section.paragraphs || [];
+    content = `
+      <div class="cv-summary-box">
+        ${paragraphs.map((p) => `<p>${escapeHtml(p)}</p>`).join("")}
+      </div>
+    `;
+  } else if (section.type === "experience" || section.type === "list") {
+    content = `
+      <div class="timeline-container">
+        ${section.items.map(renderTimelineItem).join("")}
+      </div>
+    `;
+  } else if (section.type === "language-list") {
+    content = `
+      <div class="skills-grid">
+        ${section.items.map(renderSkillCard).join("")}
+      </div>
+    `;
+  }
+
+  return `
+    <section id="${escapeHtml(section.id)}" class="cv-section">
+      <h3 class="cv-section-title">${escapeHtml(section.title)}</h3>
+      ${content}
+    </section>
+  `;
+};
+
+/**
+ * Render CV in the DOM
+ */
+function renderCV() {
+  const contactContainer = document.querySelector("#kontakt");
+  if (contactContainer) {
+    contactContainer.innerHTML = cvData.contact.map(renderContactItem).join("");
+  }
+
+  const cvContentContainer = document.querySelector("#cv-content");
+  if (cvContentContainer) {
+    cvContentContainer.innerHTML = cvData.sections.map(renderSection).join("");
+  }
 }
-document.querySelector("#contact-info").innerHTML = cvData.contact
-  .map(renderContact)
-  .join("");
-document.querySelector("#cv-content").innerHTML = cvData.sections
-  .map(renderSection)
-  .join("");
+
+/**
+ * Initialize Lightbox for Wireframe Screenshots
+ */
+function initLightbox() {
+  const modal = document.querySelector("#lightbox-modal");
+  const modalImg = document.querySelector("#lightbox-img");
+  const modalTitle = document.querySelector("#lightbox-title");
+  const closeBtn = document.querySelector("#lightbox-close");
+  const backdrop = document.querySelector("#lightbox-backdrop");
+
+  if (!modal || !modalImg) return;
+
+  function openLightbox(src, title) {
+    modalImg.src = src;
+    modalImg.alt = title || "Forstørret wireframe-visning";
+    if (modalTitle) modalTitle.textContent = title || "Wireframe";
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden"; // Prevent page scrolling
+    if (backdrop) backdrop.scrollTop = 0;
+  }
+
+  function closeLightbox() {
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+    modalImg.src = "";
+    document.body.style.overflow = "";
+  }
+
+  // Bind clicks on triggers
+  document
+    .querySelectorAll(".js-zoom-trigger, .js-zoom-btn")
+    .forEach((trigger) => {
+      const handleOpen = () => {
+        const src = trigger.getAttribute("data-img");
+        const title = trigger.getAttribute("data-title");
+        if (src) openLightbox(src, title);
+      };
+
+      trigger.addEventListener("click", handleOpen);
+      trigger.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          handleOpen();
+        }
+      });
+    });
+
+  if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+  if (backdrop) {
+    backdrop.addEventListener("click", (e) => {
+      if (e.target === backdrop) closeLightbox();
+    });
+  }
+
+  // Close on Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
+      closeLightbox();
+    }
+  });
+}
+
+let initialized = false;
+function init() {
+  if (initialized) return;
+  initialized = true;
+  renderCV();
+  initLightbox();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
+}
