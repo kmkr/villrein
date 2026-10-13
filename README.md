@@ -1,1 +1,1 @@
-View the CV at [kmkr.github.io/cv](https://kmkr.github.io/cv/).
+View the application at [kmkr.github.io/villrein](https://kmkr.github.io/villrein/).
